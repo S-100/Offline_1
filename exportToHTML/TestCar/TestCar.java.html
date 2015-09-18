@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>TestCar.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+.s4 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+TestCar.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<span class="s0">package </span><span class="s1">TestCar; 
+ 
+</span><span class="s2">/** 
+ * Created by senjuti on 9/18/2015. 
+ */</span><span class="s1"> 
+</span><span class="s0">public class </span><span class="s1">TestCar { 
+    </span><span class="s0">public static void </span><span class="s1">main(String[] args) { 
+        Driver lewis=</span><span class="s0">new </span><span class="s1">Driver(</span><span class="s3">&quot;Lewis Hamilton&quot;</span><span class="s1">, </span><span class="s4">30</span><span class="s1">, </span><span class="s3">&quot;UK&quot;</span><span class="s1">); 
+        lewis.print(); 
+ 
+        Driver vettel=</span><span class="s0">new </span><span class="s1">Driver(</span><span class="s3">&quot;Sebastian Vettel&quot;</span><span class="s1">, </span><span class="s4">28</span><span class="s1">); 
+        vettel.setCountry(</span><span class="s3">&quot;Germany&quot;</span><span class="s1">); 
+        vettel.print(); 
+ 
+        Car c1=</span><span class="s0">new </span><span class="s1">Car(</span><span class="s3">&quot;F1 W06&quot;</span><span class="s1">, </span><span class="s3">&quot;Mercedes&quot;</span><span class="s1">, lewis, </span><span class="s4">500</span><span class="s1">); 
+        System.out.println(</span><span class="s3">&quot;Name = &quot; </span><span class="s1">+ c1.getName()); 
+        System.out.println(</span><span class="s3">&quot;Manufacturer = &quot; </span><span class="s1">+ c1.getManufacturer()); 
+        System.out.println(</span><span class="s3">&quot;Driver = &quot; </span><span class="s1">+ c1.getDriver()); 
+        System.out.println(</span><span class="s3">&quot;FuelCapacity = &quot; </span><span class="s1">+ c1.getFuelCapacity()); 
+        c1.refuel(</span><span class="s4">100</span><span class="s1">); 
+        c1.drive(</span><span class="s4">400</span><span class="s1">); 
+        </span><span class="s2">/*System.out.println(&quot;Name = &quot; + c1.getName()); 
+        System.out.println(&quot;Manufacturer = &quot; + c1.getManufacturer()); 
+        System.out.println(&quot;Driver = &quot; + c1.getDriver()); 
+        System.out.println(&quot;FuelCapacity = &quot; + c1.getFuelCapacity());*/</span><span class="s1"> 
+ 
+ 
+        Car c2=</span><span class="s0">new </span><span class="s1">Car(</span><span class="s3">&quot;SF15-T&quot;</span><span class="s1">, </span><span class="s3">&quot;Ferrari&quot;</span><span class="s1">); 
+        c2.setDriver(vettel); 
+        c2.setFuelCapacity(</span><span class="s4">400</span><span class="s1">); 
+        c2.print(); 
+        c2.refuel(</span><span class="s4">50</span><span class="s1">); 
+        c2.drive(</span><span class="s4">500</span><span class="s1">); 
+        c2.print(); 
+ 
+        c1.getDriver().print(); 
+        c2.getDriver().print(); 
+ 
+ 
+    } 
+ 
+} 
+ 
+</span></pre>
+</body>
+</html>
